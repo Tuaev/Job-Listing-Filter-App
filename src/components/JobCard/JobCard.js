@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 
-const JobCard = () => {
+const JobCard = ({ job }) => {
   return (
     <div>
-      <h2>Job Card</h2>
+      <h2>{job.position}</h2>
     </div>
   );
 };

@@ -1,15 +1,22 @@
 import React, { useState, useEffect } from 'react';
 import JobCard from './components/JobCard/JobCard.js';
-import jobData from './assets/data';
+import data from './assets/data';
 
 function App() {
-  const [data, setData] = useState(jobData);
-  console.log(data);
+  const [jobs, setJobs] = useState([]);
+
+  useEffect(() => {
+    setJobs(data);
+  }, []);
 
   return (
     <div className="App">
       <h1>APP</h1>
-      <JobCard />
+      {jobs.length === 0 ? (
+        <p>Loading...</p>
+      ) : (
+        jobs.map((job) => <JobCard key={job.id} job={job} />)
+      )}
     </div>
   );
 }
