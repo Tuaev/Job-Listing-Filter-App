@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+
 import JobCard from './components/JobCard/JobCard.js';
 import data from './assets/data';
 
@@ -10,8 +11,8 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
-      <h1>APP</h1>
+    <div className="bg-blue-100">
+      <h1 className="text-4xl">APP</h1>
       {jobs.length === 0 ? (
         <p>Loading...</p>
       ) : (
