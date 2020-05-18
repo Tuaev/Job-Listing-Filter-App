@@ -46,7 +46,7 @@ const JobCard = ({ job, handleTagClick }) => {
         {jobTags &&
           jobTags.map((jobTag, i) => (
             <span
-              className="cursor-pointer text-teal-500 bg-blue-100 mr-4 my-2 p-2 rounded text-sm font-bold"
+              className="cursor-pointer text-teal-500 hover:text-blue-100 hover:bg-teal-500 bg-blue-100 mr-4 my-2 p-2 rounded text-sm font-bold"
               key={i}
               onClick={() => handleTagClick(jobTag)}
             >
